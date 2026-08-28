@@ -8,9 +8,21 @@
 		"directory": "./build/client"
 	},
 	"compatibility_flags": ["nodejs_compat"],
-	"observability": {
-		"enabled": true
-	},
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "redact_query_string": false,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    },
 	"kv_namespaces": [
 		{
 			"binding": "TO_DO_LIST",
